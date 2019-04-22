@@ -1,0 +1,16 @@
+#! /bin/bash 
+name=$1
+DATE=`date +%Y-%m-%d`
+echo "enter file extension"
+read ext
+echo "enter file prefix"
+read prf
+if [ -z "$prf" ]
+then
+mv $name $DATE.$name.$ext
+echo "renaming from $name.$ext to $DATE.$name.$ext"
+else
+mv $name $prf.$name.$ext
+echo "renaming from $name to $prf.$name.$ext"
+fi
+
