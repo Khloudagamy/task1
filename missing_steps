@@ -1,0 +1,7 @@
+############ missing steps in lemp compose ###################
+docker-compose ps
+docker-compose exec mysql bash
+mysql -u test -p
+TYPE MYSQL PASSWORD: test
+create database test;
+exit
