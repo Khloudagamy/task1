@@ -1,0 +1,8 @@
+#! /bin/bash 
+##### firewall rule to accept connection from certain IP and port #######
+
+firewall-cmd --permanent --add-rich-rule='rule family=ipv4 source address=192.168.154.182/32 port port=80 protocol=tcp accept'
+
+firewall-cmd --reload
+firewall-cmd --list-all
+
